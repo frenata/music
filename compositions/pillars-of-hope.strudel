@@ -1,0 +1,27 @@
+// "Pillars of Hope" 
+// @by Reuel and Andrew Nichols 
+// @version 0.2
+
+$: stack(
+    arrange(
+       [1, "-"]
+      ,[1, note("g g# a b# g# f e -").sound("piano").color("cyan")]
+      ,[1, note("d e c b").fast(4).sound("piano").color("cyan")]
+      ,[6, 
+         stack(
+            note("<e f g - e f g - e f g - <e f g a b c4>@4>*16")
+               .color("cyan").sound("piano"),
+            note("<g f e - g f e - g f e - <g f e d c b2>@4>*16")
+               .color("yellow")
+               .sound("gm_acoustic_guitar_nylon")
+               .gain("1.5")
+               .room("2")
+               .sus("2")
+           )]
+      ,[1, note("e g f e d c@3").sound("piano").color("cyan")]
+    ).slow(2)
+    , sound("- bd - bd").fast(2).gain(".4 .6").color("pink")
+    , sound("9000_perc:1").beat("0,1,2,4,5,6,8,9,10", 16).slow(2)
+      .gain(.4).color("light green")
+  )._punchcard( {labels: 1})
+   .scope()

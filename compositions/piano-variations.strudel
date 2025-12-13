@@ -1,0 +1,23 @@
+// "piano variations variations"
+
+let notes_c = cat("e", "c", "d#", "c#")
+let notes_s = seq("e c d# c#")
+//let variation = choose(notes)
+
+//_$notes1: sound("piano").note(variation)
+
+$notes2: sound("piano").note("<x*2 y, x z@2, y - - ->"
+        .inhabitmod(
+          {x: choose(notes_c)
+         , y: choose(notes_c)
+         , z: choose(notes_c)
+          })).fast("<1 2 1 2>")
+         .color("blue")
+
+$notes3: notes_s.shuffle(4)
+          .note().sound("gm_alto_sax")
+          .slow(4)
+          .gain(0.3)
+          .color("red")
+
+_$drums: s("- - - [rim oh]").fast(2).gain(0.4)

@@ -1,0 +1,7 @@
+// "jam with margot"
+
+$drums: s("<ht ht*2> oh*4")
+
+$bass: s("bd - [bd oh] - ")
+
+$melody: note("<[g#,c,bb]*2 [c3,c4]@2 [g#,c#,d#] e6*2>*4").sound("piano")

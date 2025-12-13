@@ -1,0 +1,16 @@
+// "jam with margot 3"
+// @by Margo and Andrew Nichols
+// @version 0.1
+
+$: stack(
+   s("ht").struct("0 1 0 1 0 1 1 0").color("red")
+ , s("gong").struct("0 0 0 1").gain(15).color("pink")
+ , s("oh").struct("0 0 0 0 0 0 1 1").sus("1.9").color("green")
+ , note("f a c e").sound("saw").room(2).warp("0 0.25").warpmode("spin").color("blue")
+ , s("[crickets basique]").bank("wt_digital").seg(8).note("F1").warp("0 0.25 0.5 0.75 1").warpmode("spin").color("gray")
+ , stack(
+   
+      s("bd").struct("1*[0 1 2 4 8 16 32 64 128 256]").sus("1.9").room("4")
+   ,  s("oh").struct("1*[0 1 0 2 0 4 0 8 0 16 0 32 0 64 0 128 0 256]").sus("1.9").room("10") ).color("yellow")
+)._pianoroll()
+ .scope( {labels: 1 })

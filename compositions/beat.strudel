@@ -1,0 +1,2 @@
+$: s("sawtooth!16").orbit(2)
+$: s("sbd!4").duck(2).duckattack(.2)
