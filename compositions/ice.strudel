@@ -1,0 +1,25 @@
+//$: s("sawtooth").note("<f a c e>").lpf(400).fast(2)
+//$: s("sawtooth").note("<f ab a# g#>").lpf(400).fast(2)
+ $: s("sawtooth").note("<b e e,g f a>").lpf(400).fast(2)
+      .lpa(slider(4.225,0,5))
+  .lpe(slider(4.85,0,10))
+  .lpq(slider(11.19,0,15));
+
+$: s("sawtooth").note("<<c4 - d4 -> <a g>5*4>").lpf(400).fast(8)
+     .lpa(slider(2.595,0,5))
+  .lpe(slider(4.85,0,10))
+  .lpq(slider(2.325,0,15));
+
+$: s("[bd - ht oh]").fast(2)
+
+$: s("cp").struct("[0 1 1 1, 0 0 1 0]").fast(2).gain(.3)
+
+$: sound("gm_viola").note("<d2 a2 f2 f#2>").gain(3).slow(2)
+
+$: sound("didgeridoo").note(choose("a","c", "d", "d#", "gb")).fast(16)
+    .room(1.2)
+    .gain(slider(1.243,1,10))
+
+$: s("bd").struct("0 0 1 0 0 1*2 0 0").gain("5")
+
+_$: sound("wt_digital_crickets").note("4").fast(10).gain("<.5 .8 1.1 1.4 .8>")
